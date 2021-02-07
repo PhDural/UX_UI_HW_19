@@ -53,6 +53,51 @@ header {
     padding: 16px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .nav{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0px;
+      height: 800px;
+      width: 100%;
+      top: 84px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      background-color: #0B0B0B;
+      z-index: 9999;
+  }
+  
+  .navlink{
+      opacity: 0%;
+  }
+}
+
+@keyframes navLinkFade{
+  from{
+      opacity: 0%;
+      transform: translateX(-50px);
+  }
+  to{
+      opacity:100%;
+      transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,12px);
+  transition: 0.3s ease;
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-12px);
+  transition: 0.3s ease;
+}
+
 
 .navlink {
     color: white;
@@ -256,6 +301,35 @@ header {
     "HeadProject3"  
 }
 
+@media only screen and (max-width: 920px) {
+  .workGrid{
+  grid-template-columns: 430px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .workGrid{
+  grid-template-columns: 85%;
+  }
+}
+
+.gridItem:hover{
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 470px) {
+  .gridItem{
+  scale: 85%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+.workImg{
+  width: 100%;
+  height: auto;
+  }
+}    
+    
 footer{
     display: flex;
     background-size: cover;
